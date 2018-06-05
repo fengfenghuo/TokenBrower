@@ -58,4 +58,16 @@ contract VBToken is StandardToken, AuthorityManaged {
         balances[teamExcitationContract] = teamExcitationAmount;
         balances[donationsExcitationContract] = donationsExcitationAmount;
     }
+
+    // function name() view public returns (string name){
+    //     return name;
+    // }
+
+    // function symbol() view public returns (string symbol){
+    //     return symbol;
+    // }
+
+    // function decimals() view public returns (uint8 decimals){
+    //     return decimals;
+    // }
 }

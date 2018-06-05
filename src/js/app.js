@@ -42,7 +42,27 @@ App = {
       App.contracts.Token.setProvider(App.web3Provider);
 
       // Use our contract to retrieve and mark the adopted pets
-      return App.getTransactions();
+      var token_name = "";
+      var token_decimals;
+      var contract_address = "";//0x46a90a33aea94f48a399792d9477c0e5db75e498
+      var token_instance;
+
+      App.contracts.Token.deployed().then(function (instance) {
+        token_instance = instance;
+        contract_address = token_instance.address;
+
+        // 调用合约用call读取信息不用消耗gas
+        return token_instance.symbol.call();
+        //token_decimals = token_instance.decimals();
+      }).then(function (name) {
+        token_name = name;
+        return token_instance.decimals.call();
+      }).then(function(decimals){
+        token_decimals = decimals;
+        return App.getTransactions(token_name, token_decimals, contract_address);
+      }).catch(function (err) {
+        console.log(err.message);
+      });
     });
 
     return App.bindEvents();
@@ -89,10 +109,7 @@ App = {
     return null;
   },
 
-  
-
-  getTransactions: function(){
-    var contract_address = "0x46a90a33aea94f48a399792d9477c0e5db75e498";
+  getTransactions: function(token_name, token_decimals, contract_address){
     var contract_hash = "0xc33941f2510fb8f23825f745706403464eddcbc53c0c84c8ee994fd746d13907";
     var result = web3.eth.getTransaction(contract_hash);
 
@@ -130,14 +147,15 @@ App = {
 
         var format_time = new Date(transactionData.time * 1000);
         var to = transactionData.input.substr(10,64).replace(/\b(0+)/gi, "");
-        var amount = transactionDetail.input.substring(75);
+        var amount = parseInt(transactionDetail.input.substring(75), 16) / Math.pow(10, token_decimals);
+
         console.log("token amount " + amount);
 
         user_data += '<tr class="one">';
         user_data += '<td>'+ format_time.toLocaleString() +'</td>';
         user_data += '<td>form: '+transactionData.from+'</td>';
         user_data += '<td>to: 0x'+ to +'</td>';
-        user_data += '<td>'+ parseInt(amount, 16) +'</td>';
+        user_data += '<td>'+ amount + ' '+ token_name + '</td>';
         user_data += '</tr>';
       }
     }
