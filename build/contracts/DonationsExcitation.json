@@ -1,0 +1,1293 @@
+{
+  "contractName": "DonationsExcitation",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "periodicTime",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "scalage",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "maxProfit",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "initDonationsPer",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "_totalAllocations",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    }
+  ],
+  "bytecode": "0x608060405262030d406002556303b5380060035561271060045561138860055534801561002b57600080fd5b506040516020806101fd8339810180604052810190808051906020019092919050505033600660006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055508060008190555050610157806100a66000396000f300608060405260043610610062576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806304c10b9a14610067578063740aad1d14610092578063b539cd55146100bd578063e33738b3146100e8575b600080fd5b34801561007357600080fd5b5061007c610113565b6040518082815260200191505060405180910390f35b34801561009e57600080fd5b506100a7610119565b6040518082815260200191505060405180910390f35b3480156100c957600080fd5b506100d261011f565b6040518082815260200191505060405180910390f35b3480156100f457600080fd5b506100fd610125565b6040518082815260200191505060405180910390f35b60035481565b60055481565b60045481565b600254815600a165627a7a72305820e73652f076c4fe5f14a2c9ed76cf55f68265f5872fee9b046471a6df52b168740029",
+  "deployedBytecode": "0x608060405260043610610062576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806304c10b9a14610067578063740aad1d14610092578063b539cd55146100bd578063e33738b3146100e8575b600080fd5b34801561007357600080fd5b5061007c610113565b6040518082815260200191505060405180910390f35b34801561009e57600080fd5b506100a7610119565b6040518082815260200191505060405180910390f35b3480156100c957600080fd5b506100d261011f565b6040518082815260200191505060405180910390f35b3480156100f457600080fd5b506100fd610125565b6040518082815260200191505060405180910390f35b60035481565b60055481565b60045481565b600254815600a165627a7a72305820e73652f076c4fe5f14a2c9ed76cf55f68265f5872fee9b046471a6df52b168740029",
+  "sourceMap": "144:559:1:-;;;384:6;353:37;;426:12;396:42;;468:5;444:29;;501:4;479:26;;532:169;8:9:-1;5:2;;;30:1;27;20:12;5:2;532:169:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;637:10;621:5;;:27;;;;;;;;;;;;;;;;;;677:17;658:16;:36;;;;532:169;144:559;;;;;;",
+  "deployedSourceMap": "144:559:1:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;396:42;;8:9:-1;5:2;;;30:1;27;20:12;5:2;396:42:1;;;;;;;;;;;;;;;;;;;;;;;479:26;;8:9:-1;5:2;;;30:1;27;20:12;5:2;479:26:1;;;;;;;;;;;;;;;;;;;;;;;444:29;;8:9:-1;5:2;;;30:1;27;20:12;5:2;444:29:1;;;;;;;;;;;;;;;;;;;;;;;353:37;;8:9:-1;5:2;;;30:1;27;20:12;5:2;353:37:1;;;;;;;;;;;;;;;;;;;;;;;396:42;;;;:::o;479:26::-;;;;:::o;444:29::-;;;;:::o;353:37::-;;;;:::o",
+  "source": "pragma solidity ^0.4.23;\n\nimport \"./math/SafeMath.sol\";\nimport \"./VBToken.sol\";\n\n/// @title DonationsExcitation - vault of takens allocated ß\n\ncontract DonationsExcitation {\n    using SafeMath for uint256;\n\n    // Total number of allocations to distribute additional tokens\n    uint256 totalAllocations;\n\n    mapping(address => uint256) balances;\n\n    uint public initDonationsPer = 200000;\n    uint256 public periodicTime = 24 * 30 days;\n    uint public maxProfit = 10000;\n    uint public scalage = 5000;\n\n    VBToken token;\n\n    function DonationsExcitation (\n        uint256 _totalAllocations \n    ) public {\n        token = VBToken(msg.sender);\n        totalAllocations = _totalAllocations;\n    }\n}",
+  "sourcePath": "D:\\Work\\ContectsWork\\TokenBrower\\contracts\\DonationsExcitation.sol",
+  "ast": {
+    "absolutePath": "/D/Work/ContectsWork/TokenBrower/contracts/DonationsExcitation.sol",
+    "exportedSymbols": {
+      "DonationsExcitation": [
+        123
+      ]
+    },
+    "id": 124,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 78,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".23"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:1"
+      },
+      {
+        "absolutePath": "/D/Work/ContectsWork/TokenBrower/contracts/math/SafeMath.sol",
+        "file": "./math/SafeMath.sol",
+        "id": 79,
+        "nodeType": "ImportDirective",
+        "scope": 124,
+        "sourceUnit": 524,
+        "src": "26:29:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/D/Work/ContectsWork/TokenBrower/contracts/VBToken.sol",
+        "file": "./VBToken.sol",
+        "id": 80,
+        "nodeType": "ImportDirective",
+        "scope": 124,
+        "sourceUnit": 430,
+        "src": "56:23:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title DonationsExcitation - vault of takens allocated ß",
+        "fullyImplemented": true,
+        "id": 123,
+        "linearizedBaseContracts": [
+          123
+        ],
+        "name": "DonationsExcitation",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 83,
+            "libraryName": {
+              "contractScope": null,
+              "id": 81,
+              "name": "SafeMath",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 523,
+              "src": "185:8:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_SafeMath_$523",
+                "typeString": "library SafeMath"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "179:27:1",
+            "typeName": {
+              "id": 82,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "198:7:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            }
+          },
+          {
+            "constant": false,
+            "id": 85,
+            "name": "totalAllocations",
+            "nodeType": "VariableDeclaration",
+            "scope": 123,
+            "src": "279:24:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 84,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "279:7:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 89,
+            "name": "balances",
+            "nodeType": "VariableDeclaration",
+            "scope": 123,
+            "src": "310:36:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+              "typeString": "mapping(address => uint256)"
+            },
+            "typeName": {
+              "id": 88,
+              "keyType": {
+                "id": 86,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "318:7:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "310:27:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                "typeString": "mapping(address => uint256)"
+              },
+              "valueType": {
+                "id": 87,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "329:7:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 92,
+            "name": "initDonationsPer",
+            "nodeType": "VariableDeclaration",
+            "scope": 123,
+            "src": "353:37:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 90,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "353:4:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "323030303030",
+              "id": 91,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "384:6:1",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_200000_by_1",
+                "typeString": "int_const 200000"
+              },
+              "value": "200000"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 97,
+            "name": "periodicTime",
+            "nodeType": "VariableDeclaration",
+            "scope": 123,
+            "src": "396:42:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 93,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "396:7:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "commonType": {
+                "typeIdentifier": "t_rational_62208000_by_1",
+                "typeString": "int_const 62208000"
+              },
+              "id": 96,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "lValueRequested": false,
+              "leftExpression": {
+                "argumentTypes": null,
+                "hexValue": "3234",
+                "id": 94,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "kind": "number",
+                "lValueRequested": false,
+                "nodeType": "Literal",
+                "src": "426:2:1",
+                "subdenomination": null,
+                "typeDescriptions": {
+                  "typeIdentifier": "t_rational_24_by_1",
+                  "typeString": "int_const 24"
+                },
+                "value": "24"
+              },
+              "nodeType": "BinaryOperation",
+              "operator": "*",
+              "rightExpression": {
+                "argumentTypes": null,
+                "hexValue": "3330",
+                "id": 95,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "kind": "number",
+                "lValueRequested": false,
+                "nodeType": "Literal",
+                "src": "431:7:1",
+                "subdenomination": "days",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_rational_2592000_by_1",
+                  "typeString": "int_const 2592000"
+                },
+                "value": "30"
+              },
+              "src": "426:12:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_62208000_by_1",
+                "typeString": "int_const 62208000"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 100,
+            "name": "maxProfit",
+            "nodeType": "VariableDeclaration",
+            "scope": 123,
+            "src": "444:29:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 98,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "444:4:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "3130303030",
+              "id": 99,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "468:5:1",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_10000_by_1",
+                "typeString": "int_const 10000"
+              },
+              "value": "10000"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 103,
+            "name": "scalage",
+            "nodeType": "VariableDeclaration",
+            "scope": 123,
+            "src": "479:26:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 101,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "479:4:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "35303030",
+              "id": 102,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "501:4:1",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_5000_by_1",
+                "typeString": "int_const 5000"
+              },
+              "value": "5000"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 105,
+            "name": "token",
+            "nodeType": "VariableDeclaration",
+            "scope": 123,
+            "src": "512:13:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_VBToken_$429",
+              "typeString": "contract VBToken"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 104,
+              "name": "VBToken",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 429,
+              "src": "512:7:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_VBToken_$429",
+                "typeString": "contract VBToken"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 121,
+              "nodeType": "Block",
+              "src": "611:90:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 115,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 110,
+                      "name": "token",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 105,
+                      "src": "621:5:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_VBToken_$429",
+                        "typeString": "contract VBToken"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 112,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 956,
+                            "src": "637:3:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 113,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "637:10:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 111,
+                        "name": "VBToken",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 429,
+                        "src": "629:7:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_VBToken_$429_$",
+                          "typeString": "type(contract VBToken)"
+                        }
+                      },
+                      "id": 114,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "629:19:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_VBToken_$429",
+                        "typeString": "contract VBToken"
+                      }
+                    },
+                    "src": "621:27:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_VBToken_$429",
+                      "typeString": "contract VBToken"
+                    }
+                  },
+                  "id": 116,
+                  "nodeType": "ExpressionStatement",
+                  "src": "621:27:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 119,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 117,
+                      "name": "totalAllocations",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 85,
+                      "src": "658:16:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 118,
+                      "name": "_totalAllocations",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 107,
+                      "src": "677:17:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "658:36:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 120,
+                  "nodeType": "ExpressionStatement",
+                  "src": "658:36:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 122,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "DonationsExcitation",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 108,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 107,
+                  "name": "_totalAllocations",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 122,
+                  "src": "571:25:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 106,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "571:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "561:42:1"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 109,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "611:0:1"
+            },
+            "scope": 123,
+            "src": "532:169:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 124,
+        "src": "144:559:1"
+      }
+    ],
+    "src": "0:703:1"
+  },
+  "legacyAST": {
+    "absolutePath": "/D/Work/ContectsWork/TokenBrower/contracts/DonationsExcitation.sol",
+    "exportedSymbols": {
+      "DonationsExcitation": [
+        123
+      ]
+    },
+    "id": 124,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 78,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".23"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:1"
+      },
+      {
+        "absolutePath": "/D/Work/ContectsWork/TokenBrower/contracts/math/SafeMath.sol",
+        "file": "./math/SafeMath.sol",
+        "id": 79,
+        "nodeType": "ImportDirective",
+        "scope": 124,
+        "sourceUnit": 524,
+        "src": "26:29:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/D/Work/ContectsWork/TokenBrower/contracts/VBToken.sol",
+        "file": "./VBToken.sol",
+        "id": 80,
+        "nodeType": "ImportDirective",
+        "scope": 124,
+        "sourceUnit": 430,
+        "src": "56:23:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title DonationsExcitation - vault of takens allocated ß",
+        "fullyImplemented": true,
+        "id": 123,
+        "linearizedBaseContracts": [
+          123
+        ],
+        "name": "DonationsExcitation",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 83,
+            "libraryName": {
+              "contractScope": null,
+              "id": 81,
+              "name": "SafeMath",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 523,
+              "src": "185:8:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_SafeMath_$523",
+                "typeString": "library SafeMath"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "179:27:1",
+            "typeName": {
+              "id": 82,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "198:7:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            }
+          },
+          {
+            "constant": false,
+            "id": 85,
+            "name": "totalAllocations",
+            "nodeType": "VariableDeclaration",
+            "scope": 123,
+            "src": "279:24:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 84,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "279:7:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 89,
+            "name": "balances",
+            "nodeType": "VariableDeclaration",
+            "scope": 123,
+            "src": "310:36:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+              "typeString": "mapping(address => uint256)"
+            },
+            "typeName": {
+              "id": 88,
+              "keyType": {
+                "id": 86,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "318:7:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "310:27:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                "typeString": "mapping(address => uint256)"
+              },
+              "valueType": {
+                "id": 87,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "329:7:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 92,
+            "name": "initDonationsPer",
+            "nodeType": "VariableDeclaration",
+            "scope": 123,
+            "src": "353:37:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 90,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "353:4:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "323030303030",
+              "id": 91,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "384:6:1",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_200000_by_1",
+                "typeString": "int_const 200000"
+              },
+              "value": "200000"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 97,
+            "name": "periodicTime",
+            "nodeType": "VariableDeclaration",
+            "scope": 123,
+            "src": "396:42:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 93,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "396:7:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "commonType": {
+                "typeIdentifier": "t_rational_62208000_by_1",
+                "typeString": "int_const 62208000"
+              },
+              "id": 96,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "lValueRequested": false,
+              "leftExpression": {
+                "argumentTypes": null,
+                "hexValue": "3234",
+                "id": 94,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "kind": "number",
+                "lValueRequested": false,
+                "nodeType": "Literal",
+                "src": "426:2:1",
+                "subdenomination": null,
+                "typeDescriptions": {
+                  "typeIdentifier": "t_rational_24_by_1",
+                  "typeString": "int_const 24"
+                },
+                "value": "24"
+              },
+              "nodeType": "BinaryOperation",
+              "operator": "*",
+              "rightExpression": {
+                "argumentTypes": null,
+                "hexValue": "3330",
+                "id": 95,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "kind": "number",
+                "lValueRequested": false,
+                "nodeType": "Literal",
+                "src": "431:7:1",
+                "subdenomination": "days",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_rational_2592000_by_1",
+                  "typeString": "int_const 2592000"
+                },
+                "value": "30"
+              },
+              "src": "426:12:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_62208000_by_1",
+                "typeString": "int_const 62208000"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 100,
+            "name": "maxProfit",
+            "nodeType": "VariableDeclaration",
+            "scope": 123,
+            "src": "444:29:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 98,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "444:4:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "3130303030",
+              "id": 99,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "468:5:1",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_10000_by_1",
+                "typeString": "int_const 10000"
+              },
+              "value": "10000"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 103,
+            "name": "scalage",
+            "nodeType": "VariableDeclaration",
+            "scope": 123,
+            "src": "479:26:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 101,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "479:4:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "35303030",
+              "id": 102,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "501:4:1",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_5000_by_1",
+                "typeString": "int_const 5000"
+              },
+              "value": "5000"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 105,
+            "name": "token",
+            "nodeType": "VariableDeclaration",
+            "scope": 123,
+            "src": "512:13:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_VBToken_$429",
+              "typeString": "contract VBToken"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 104,
+              "name": "VBToken",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 429,
+              "src": "512:7:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_VBToken_$429",
+                "typeString": "contract VBToken"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 121,
+              "nodeType": "Block",
+              "src": "611:90:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 115,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 110,
+                      "name": "token",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 105,
+                      "src": "621:5:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_VBToken_$429",
+                        "typeString": "contract VBToken"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 112,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 956,
+                            "src": "637:3:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 113,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "637:10:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 111,
+                        "name": "VBToken",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 429,
+                        "src": "629:7:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_VBToken_$429_$",
+                          "typeString": "type(contract VBToken)"
+                        }
+                      },
+                      "id": 114,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "629:19:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_VBToken_$429",
+                        "typeString": "contract VBToken"
+                      }
+                    },
+                    "src": "621:27:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_VBToken_$429",
+                      "typeString": "contract VBToken"
+                    }
+                  },
+                  "id": 116,
+                  "nodeType": "ExpressionStatement",
+                  "src": "621:27:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 119,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 117,
+                      "name": "totalAllocations",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 85,
+                      "src": "658:16:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 118,
+                      "name": "_totalAllocations",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 107,
+                      "src": "677:17:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "658:36:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 120,
+                  "nodeType": "ExpressionStatement",
+                  "src": "658:36:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 122,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "DonationsExcitation",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 108,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 107,
+                  "name": "_totalAllocations",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 122,
+                  "src": "571:25:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 106,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "571:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "561:42:1"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 109,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "611:0:1"
+            },
+            "scope": 123,
+            "src": "532:169:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 124,
+        "src": "144:559:1"
+      }
+    ],
+    "src": "0:703:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.0",
+  "updatedAt": "2018-06-05T06:45:52.862Z"
+}
