@@ -41,31 +41,36 @@ App = {
       // Set the provider for our contract
       App.contracts.Token.setProvider(App.web3Provider);
 
-      // Use our contract to retrieve and mark the adopted pets
-      var token_name = "";
-      var token_decimals;
-      var contract_address = "";//0x46a90a33aea94f48a399792d9477c0e5db75e498
-      var token_instance;
-
-      App.contracts.Token.deployed().then(function (instance) {
-        token_instance = instance;
-        contract_address = token_instance.address;
-
-        // 调用合约用call读取信息不用消耗gas
-        return token_instance.symbol.call();
-        //token_decimals = token_instance.decimals();
-      }).then(function (name) {
-        token_name = name;
-        return token_instance.decimals.call();
-      }).then(function(decimals){
-        token_decimals = decimals;
-        return App.getTransactions(token_name, token_decimals, contract_address);
-      }).catch(function (err) {
-        console.log(err.message);
-      });
+      App.bindContractEvents();
+      return App.initContractData();
     });
 
     return App.bindEvents();
+  },
+
+  initContractData: function(){
+    $('#user_table').empty("");
+    var token_name = "";
+    var token_decimals;
+    var contract_address = "";//0x46a90a33aea94f48a399792d9477c0e5db75e498
+    var token_instance;
+
+    App.contracts.Token.deployed().then(function (instance) {
+      token_instance = instance;
+      contract_address = token_instance.address;
+
+      // 调用合约用call读取信息不用消耗gas
+      return token_instance.symbol.call();
+      //token_decimals = token_instance.decimals();
+    }).then(function (name) {
+      token_name = name;
+      return token_instance.decimals.call();
+    }).then(function(decimals){
+      token_decimals = decimals;
+      return App.getTransactions(token_name, token_decimals, contract_address);
+    }).catch(function (err) {
+      console.log(err.message);
+    });
   },
 
   //时间戳转日期格式  
@@ -132,10 +137,6 @@ App = {
         
         if(transactionDetail.to != contract_address) continue;
 
-        if(web3.eth.getCode(transactionDetail.to) !== '0x'){
-          console.log("is contract");
-        }
-
         var transactionData={
           time : blockInfo.timestamp,
           from: transactionDetail.from,
@@ -159,12 +160,29 @@ App = {
         user_data += '</tr>';
       }
     }
-    console.log(user_data);
+    //console.log(user_data);
     $('#user_table').append(user_data);
   },
 
   closeBox: function(){
     $('.box2').hide();
+  },
+
+  bindContractEvents: function(){
+    App.contracts.Token.deployed().then(function (instance) {
+      token_instance = instance;
+      var transfer_event = token_instance.Transfer();
+
+      transfer_event.watch(function(error, result){
+        if(!error){
+          App.initContractData();
+        } else {
+          console.log(error);
+        } 
+      })
+    }).catch(function (err) {
+      console.log(err.message);
+    });
   },
 
   bindEvents: function() {
