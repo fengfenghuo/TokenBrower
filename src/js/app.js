@@ -78,8 +78,18 @@ App = {
   },
 
   isContract: function(address){
-    return web3.eth.getCode(address) === '0x';
+    return web3.eth.getCode(address) !== '0x';
   },
+
+  getMethod: function(method){
+    if(method === sha3_256("transfer(address,uint256")){
+      return 'transfer';
+    }
+    //TODO: other method
+    return null;
+  },
+
+  
 
   getTransactions: function(){
     var contract_address = "0x46a90a33aea94f48a399792d9477c0e5db75e498";
@@ -103,6 +113,12 @@ App = {
         var transactionDetail = web3.eth.getTransaction(blockInfo.transactions[j]);
         if(!App.isContract(transactionDetail.to)) continue;
         
+        if(transactionDetail.to != contract_address) continue;
+
+        if(web3.eth.getCode(transactionDetail.to) !== '0x'){
+          console.log("is contract");
+        }
+
         var transactionData={
           time : blockInfo.timestamp,
           from: transactionDetail.from,
@@ -113,12 +129,15 @@ App = {
         };
 
         var format_time = new Date(transactionData.time * 1000);
+        var to = transactionData.input.substr(10,64).replace(/\b(0+)/gi, "");
+        var amount = transactionDetail.input.substring(75);
+        console.log("token amount " + amount);
 
         user_data += '<tr class="one">';
         user_data += '<td>'+ format_time.toLocaleString() +'</td>';
         user_data += '<td>form: '+transactionData.from+'</td>';
-        user_data += '<td>to: '+transactionData.to+'</td>';
-        user_data += '<td>'+transactionData.input+'</td>';
+        user_data += '<td>to: 0x'+ to +'</td>';
+        user_data += '<td>'+ parseInt(amount, 16) +'</td>';
         user_data += '</tr>';
       }
     }
