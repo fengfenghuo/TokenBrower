@@ -257,6 +257,7 @@ var contract = (function(module) {
       var address = contract;
       var contract_class = constructor.web3.eth.contract(this.abi);
       contract = contract_class.at(address);
+      contract.transactionHash = constructor.network.transactionHash;
     }
 
     this.contract = contract;
@@ -685,6 +686,16 @@ var contract = (function(module) {
     networks: function() {
       return this._json.networks;
     },
+    transactionHash: {
+      get: function() {
+        var transactionHash = this.network.transactionHash;
+        if (transactionHash == null) {
+          throw new Error("Cannot find deployed transactionHash: " + this.contract_name + " not deployed or transactionHash not set.")
+        }
+
+        return transactionHash;
+      }
+    },
     address: {
       get: function() {
         var address = this.network.address;
@@ -846,7 +857,7 @@ contract.fromSolJS = function(soljs_abstraction, ignore_default_network) {
 
     networks[network_name] = {};
 
-    ["address", "events", "links", "updated_at"].forEach(function(key) {
+    ["address", "events", "links", "updated_at", "transactionHash"].forEach(function(key) {
       networks[network_name][key] = soljs_abstraction.all_networks[network_name][key];
     })
   });

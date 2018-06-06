@@ -37,7 +37,7 @@ App = {
       // 用VBToken.json数据创建一个可交互的TruffleContract合约实例。
       var Artifact = data;
       App.contracts.Token = TruffleContract(Artifact);
-
+      
       // Set the provider for our contract
       App.contracts.Token.setProvider(App.web3Provider);
 
@@ -56,7 +56,14 @@ App = {
     var contract_hash = "";//"0x29c704137e320183cf3fc3266dc57ec8499f9e7e09efc41971ccd773b75a6010";
     var token_instance;
 
+    // $.getJSON('VBToken.json', function (data) {
+    //   var temp = data.networks;
+    //   contract_hash = temp.transactionHash;
+    // });
+
     App.contracts.Token.deployed().then(function (instance) {
+      console.log(instance);
+
       token_instance = instance;
       contract_address = token_instance.address;
       contract_hash = token_instance.transactionHash;
