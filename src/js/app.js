@@ -53,11 +53,13 @@ App = {
     var token_name = "";
     var token_decimals;
     var contract_address = "";//0x46a90a33aea94f48a399792d9477c0e5db75e498
+    var contract_hash = "";//"0x29c704137e320183cf3fc3266dc57ec8499f9e7e09efc41971ccd773b75a6010";
     var token_instance;
 
     App.contracts.Token.deployed().then(function (instance) {
       token_instance = instance;
       contract_address = token_instance.address;
+      contract_hash = token_instance.transactionHash;
 
       // 调用合约用call读取信息不用消耗gas
       return token_instance.symbol.call();
@@ -67,7 +69,7 @@ App = {
       return token_instance.decimals.call();
     }).then(function(decimals){
       token_decimals = decimals;
-      return App.getTransactions(token_name, token_decimals, contract_address);
+      return App.getTransactions(token_name, token_decimals, contract_address, contract_hash);
     }).catch(function (err) {
       console.log(err.message);
     });
@@ -114,8 +116,7 @@ App = {
     return null;
   },
 
-  getTransactions: function(token_name, token_decimals, contract_address){
-    var contract_hash = "0xc33941f2510fb8f23825f745706403464eddcbc53c0c84c8ee994fd746d13907";
+  getTransactions: function(token_name, token_decimals, contract_address, contract_hash){
     var result = web3.eth.getTransaction(contract_hash);
 
     var cur_block = web3.eth.defaultBlock;
