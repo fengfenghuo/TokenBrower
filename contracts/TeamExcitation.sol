@@ -1,7 +1,7 @@
 pragma solidity ^0.4.23;
 
 import "./math/SafeMath.sol";
-import "./VBToken.sol";
+import "./SFOXToken.sol";
 
 /// @title TeamExcitation - Time-locked vault of takens allocated ß
 
@@ -9,7 +9,7 @@ contract TeamExcitation {
     using SafeMath for uint256;
     // Total number of allocations to distribute additional tokens
     address allocationAccount;
-    uint256 totalAllocations;
+    uint256 public totalAllocations;
 
     uint private maxProfit = 10000;
     uint private perUnlockProfit = 500;
@@ -17,14 +17,15 @@ contract TeamExcitation {
     uint256 public createTime;
     uint256 public lockedTime;
 
-    VBToken token;
+    SFOXToken token;
 
     function TeamExcitation (
+        SFOXToken _token,
         address _allocationAccount, 
         uint256 _totalAllocations, 
         uint256 _lockedTime
     ) public {
-        token = VBToken(msg.sender);
+        token = _token;
         allocationAccount = _allocationAccount;
         lockedTime = _lockedTime;
         createTime = now;
@@ -38,18 +39,17 @@ contract TeamExcitation {
         if(toTransfer == 0) return false;
 
         if(!token.transfer(allocationAccount, toTransfer)) return false;
-        totalAllocations = totalAllocations.sub(toTransfer);
         return true;
     }
 
     function getLockBalance() public view returns (uint256 balance) {
-        return totalAllocations - getUnlockBalance();
+        return token.balanceOf(this) - getUnlockBalance();
     }
 
     function getUnlockBalance() public view returns (uint256 balance) {
         if(now < createTime + lockedTime) return 0;
 
-        var count = now.sub(createTime).div(30 days) + 1;
-        return totalAllocations.mul(perUnlockProfit.mul(count)).div(maxProfit);
+        uint count = now.sub(createTime).div(30 days) + 1;
+        return token.balanceOf(this).mul(perUnlockProfit.mul(count)).div(maxProfit);
     }
 }

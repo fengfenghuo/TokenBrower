@@ -5,13 +5,13 @@ import "./AuthorityManaged.sol";
 import "./TeamExcitation.sol";
 import "./DonationsExcitation.sol";
 
-contract VBToken is StandardToken, AuthorityManaged {
+contract SFOXToken is StandardToken, AuthorityManaged {
     /**
         Token info
     */
-    string constant public name = "XToken";
-    uint8 constant  public decimals = 8;
-    string constant public symbol = "XT";
+    string constant public name = "SFOX";
+    uint8 constant  public decimals = 18;
+    string constant public symbol = "SF";
 
     /**
         profit
@@ -35,11 +35,12 @@ contract VBToken is StandardToken, AuthorityManaged {
     DonationsExcitation public donationsExcitationContract;
     TeamExcitation public teamExcitationContract;
 
-    function VBToken(
+    function SFOXToken(
         uint256 _initialAmount,
         address _foundationAddress, 
         address _counselorAddress,
         address _teamAccount,
+        address _donationsAccount,
         address _promotionAccount
     ) public {
         totalSupply_ = _initialAmount * 10 ** uint256(decimals);
@@ -48,8 +49,8 @@ contract VBToken is StandardToken, AuthorityManaged {
         uint256 donationsExcitationAmount = totalSupply_ / maxDivisor * excitationProfit;
         uint256 teamExcitationAmount = totalSupply_ / maxDivisor * teamProfit;
 
-        donationsExcitationContract = new DonationsExcitation(donationsExcitationAmount);
-        teamExcitationContract = new TeamExcitation(_teamAccount, teamExcitationAmount, teamExcitationLockTime);
+        donationsExcitationContract = new DonationsExcitation(this, _donationsAccount, donationsExcitationAmount);
+        teamExcitationContract = new TeamExcitation(this, _teamAccount, teamExcitationAmount, teamExcitationLockTime);
 
         balances[msg.sender] = totalSupply_ / maxDivisor * ICOProfit;
         balances[_promotionAccount] = totalSupply_ / maxDivisor * promotionProfit;
@@ -58,16 +59,4 @@ contract VBToken is StandardToken, AuthorityManaged {
         balances[teamExcitationContract] = teamExcitationAmount;
         balances[donationsExcitationContract] = donationsExcitationAmount;
     }
-
-    // function name() view public returns (string name){
-    //     return name;
-    // }
-
-    // function symbol() view public returns (string symbol){
-    //     return symbol;
-    // }
-
-    // function decimals() view public returns (uint8 decimals){
-    //     return decimals;
-    // }
 }

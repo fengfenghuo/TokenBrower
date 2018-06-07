@@ -14,7 +14,7 @@ contract AuthorityManaged {
     /**
         constructor
     */
-    function AuthorityManaged() public {
+    function contractor() public {
         owner = msg.sender;
     }
 
