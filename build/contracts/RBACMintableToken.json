@@ -488,14 +488,14 @@
     "absolutePath": "/d/Work/ContectsWork/TokenBrower/contracts/token/ERC20/RBACMintableToken.sol",
     "exportedSymbols": {
       "RBACMintableToken": [
-        3765
+        3788
       ]
     },
-    "id": 3766,
+    "id": 3789,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 3719,
+        "id": 3742,
         "literals": [
           "solidity",
           "^",
@@ -508,10 +508,10 @@
       {
         "absolutePath": "/d/Work/ContectsWork/TokenBrower/contracts/token/ERC20/MintableToken.sol",
         "file": "./MintableToken.sol",
-        "id": 3720,
+        "id": 3743,
         "nodeType": "ImportDirective",
-        "scope": 3766,
-        "sourceUnit": 3616,
+        "scope": 3789,
+        "sourceUnit": 3639,
         "src": "26:29:46",
         "symbolAliases": [],
         "unitAlias": ""
@@ -519,10 +519,10 @@
       {
         "absolutePath": "/d/Work/ContectsWork/TokenBrower/contracts/ownership/rbac/RBAC.sol",
         "file": "../../ownership/rbac/RBAC.sol",
-        "id": 3721,
+        "id": 3744,
         "nodeType": "ImportDirective",
-        "scope": 3766,
-        "sourceUnit": 3052,
+        "scope": 3789,
+        "sourceUnit": 3075,
         "src": "56:39:46",
         "symbolAliases": [],
         "unitAlias": ""
@@ -533,17 +533,17 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 3722,
+              "id": 3745,
               "name": "MintableToken",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 3615,
+              "referencedDeclaration": 3638,
               "src": "263:13:46",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_MintableToken_$3615",
+                "typeIdentifier": "t_contract$_MintableToken_$3638",
                 "typeString": "contract MintableToken"
               }
             },
-            "id": 3723,
+            "id": 3746,
             "nodeType": "InheritanceSpecifier",
             "src": "263:13:46"
           },
@@ -551,53 +551,53 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 3724,
+              "id": 3747,
               "name": "RBAC",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 3051,
+              "referencedDeclaration": 3074,
               "src": "278:4:46",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_RBAC_$3051",
+                "typeIdentifier": "t_contract$_RBAC_$3074",
                 "typeString": "contract RBAC"
               }
             },
-            "id": 3725,
+            "id": 3748,
             "nodeType": "InheritanceSpecifier",
             "src": "278:4:46"
           }
         ],
         "contractDependencies": [
-          2811,
-          3051,
-          3276,
-          3477,
-          3509,
-          3615,
-          4124
+          2834,
+          3074,
+          3299,
+          3500,
+          3532,
+          3638,
+          4147
         ],
         "contractKind": "contract",
         "documentation": "@title RBACMintableToken\n@author Vittorio Minacori (@vittominacori)\n@dev Mintable Token, with RBAC minter permissions",
         "fullyImplemented": true,
-        "id": 3765,
+        "id": 3788,
         "linearizedBaseContracts": [
-          3765,
-          3051,
-          3615,
-          2811,
-          4124,
-          3276,
-          3477,
-          3509
+          3788,
+          3074,
+          3638,
+          2834,
+          4147,
+          3299,
+          3500,
+          3532
         ],
         "name": "RBACMintableToken",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": true,
-            "id": 3728,
+            "id": 3751,
             "name": "ROLE_MINTER",
             "nodeType": "VariableDeclaration",
-            "scope": 3765,
+            "scope": 3788,
             "src": "349:45:46",
             "stateVariable": true,
             "storageLocation": "default",
@@ -606,7 +606,7 @@
               "typeString": "string"
             },
             "typeName": {
-              "id": 3726,
+              "id": 3749,
               "name": "string",
               "nodeType": "ElementaryTypeName",
               "src": "349:6:46",
@@ -618,7 +618,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "6d696e746572",
-              "id": 3727,
+              "id": 3750,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -637,7 +637,7 @@
           },
           {
             "body": {
-              "id": 3737,
+              "id": 3760,
               "nodeType": "Block",
               "src": "511:52:46",
               "statements": [
@@ -649,18 +649,18 @@
                         "argumentTypes": null,
                         "expression": {
                           "argumentTypes": null,
-                          "id": 3731,
+                          "id": 3754,
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 5905,
+                          "referencedDeclaration": 5928,
                           "src": "527:3:46",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
                             "typeString": "msg"
                           }
                         },
-                        "id": 3732,
+                        "id": 3755,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -676,11 +676,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 3733,
+                        "id": 3756,
                         "name": "ROLE_MINTER",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3728,
+                        "referencedDeclaration": 3751,
                         "src": "539:11:46",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory",
@@ -699,18 +699,18 @@
                           "typeString": "string memory"
                         }
                       ],
-                      "id": 3730,
+                      "id": 3753,
                       "name": "checkRole",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2981,
+                      "referencedDeclaration": 3004,
                       "src": "517:9:46",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_view$_t_address_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (address,string memory) view"
                       }
                     },
-                    "id": 3734,
+                    "id": 3757,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -724,23 +724,23 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 3735,
+                  "id": 3758,
                   "nodeType": "ExpressionStatement",
                   "src": "517:34:46"
                 },
                 {
-                  "id": 3736,
+                  "id": 3759,
                   "nodeType": "PlaceholderStatement",
                   "src": "557:1:46"
                 }
               ]
             },
             "documentation": "@dev override the Mintable token modifier to add role based logic",
-            "id": 3738,
+            "id": 3761,
             "name": "hasMintPermission",
             "nodeType": "ModifierDefinition",
             "parameters": {
-              "id": 3729,
+              "id": 3752,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "508:2:46"
@@ -750,7 +750,7 @@
           },
           {
             "body": {
-              "id": 3750,
+              "id": 3773,
               "nodeType": "Block",
               "src": "700:39:46",
               "statements": [
@@ -760,11 +760,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 3746,
+                        "id": 3769,
                         "name": "minter",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3740,
+                        "referencedDeclaration": 3763,
                         "src": "714:6:46",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -773,11 +773,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 3747,
+                        "id": 3770,
                         "name": "ROLE_MINTER",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3728,
+                        "referencedDeclaration": 3751,
                         "src": "722:11:46",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory",
@@ -796,18 +796,18 @@
                           "typeString": "string memory"
                         }
                       ],
-                      "id": 3745,
+                      "id": 3768,
                       "name": "addRole",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3018,
+                      "referencedDeclaration": 3041,
                       "src": "706:7:46",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (address,string memory)"
                       }
                     },
-                    "id": 3748,
+                    "id": 3771,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -821,28 +821,28 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 3749,
+                  "id": 3772,
                   "nodeType": "ExpressionStatement",
                   "src": "706:28:46"
                 }
               ]
             },
             "documentation": "@dev add a minter role to an address\n@param minter address",
-            "id": 3751,
+            "id": 3774,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
             "modifiers": [
               {
                 "arguments": null,
-                "id": 3743,
+                "id": 3766,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 3742,
+                  "id": 3765,
                   "name": "onlyOwner",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 2769,
+                  "referencedDeclaration": 2792,
                   "src": "683:9:46",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -856,15 +856,15 @@
             "name": "addMinter",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3741,
+              "id": 3764,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3740,
+                  "id": 3763,
                   "name": "minter",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3751,
+                  "scope": 3774,
                   "src": "667:14:46",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -873,7 +873,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3739,
+                    "id": 3762,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "667:7:46",
@@ -890,12 +890,12 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 3744,
+              "id": 3767,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "700:0:46"
             },
-            "scope": 3765,
+            "scope": 3788,
             "src": "648:91:46",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -903,7 +903,7 @@
           },
           {
             "body": {
-              "id": 3763,
+              "id": 3786,
               "nodeType": "Block",
               "src": "884:42:46",
               "statements": [
@@ -913,11 +913,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 3759,
+                        "id": 3782,
                         "name": "minter",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3753,
+                        "referencedDeclaration": 3776,
                         "src": "901:6:46",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -926,11 +926,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 3760,
+                        "id": 3783,
                         "name": "ROLE_MINTER",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3728,
+                        "referencedDeclaration": 3751,
                         "src": "909:11:46",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory",
@@ -949,18 +949,18 @@
                           "typeString": "string memory"
                         }
                       ],
-                      "id": 3758,
+                      "id": 3781,
                       "name": "removeRole",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3038,
+                      "referencedDeclaration": 3061,
                       "src": "890:10:46",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (address,string memory)"
                       }
                     },
-                    "id": 3761,
+                    "id": 3784,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -974,28 +974,28 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 3762,
+                  "id": 3785,
                   "nodeType": "ExpressionStatement",
                   "src": "890:31:46"
                 }
               ]
             },
             "documentation": "@dev remove a minter role from an address\n@param minter address",
-            "id": 3764,
+            "id": 3787,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
             "modifiers": [
               {
                 "arguments": null,
-                "id": 3756,
+                "id": 3779,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 3755,
+                  "id": 3778,
                   "name": "onlyOwner",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 2769,
+                  "referencedDeclaration": 2792,
                   "src": "867:9:46",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -1009,15 +1009,15 @@
             "name": "removeMinter",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3754,
+              "id": 3777,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3753,
+                  "id": 3776,
                   "name": "minter",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3764,
+                  "scope": 3787,
                   "src": "851:14:46",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1026,7 +1026,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3752,
+                    "id": 3775,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "851:7:46",
@@ -1043,19 +1043,19 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 3757,
+              "id": 3780,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "884:0:46"
             },
-            "scope": 3765,
+            "scope": 3788,
             "src": "829:97:46",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 3766,
+        "scope": 3789,
         "src": "233:695:46"
       }
     ],
@@ -1065,14 +1065,14 @@
     "absolutePath": "/d/Work/ContectsWork/TokenBrower/contracts/token/ERC20/RBACMintableToken.sol",
     "exportedSymbols": {
       "RBACMintableToken": [
-        3765
+        3788
       ]
     },
-    "id": 3766,
+    "id": 3789,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 3719,
+        "id": 3742,
         "literals": [
           "solidity",
           "^",
@@ -1085,10 +1085,10 @@
       {
         "absolutePath": "/d/Work/ContectsWork/TokenBrower/contracts/token/ERC20/MintableToken.sol",
         "file": "./MintableToken.sol",
-        "id": 3720,
+        "id": 3743,
         "nodeType": "ImportDirective",
-        "scope": 3766,
-        "sourceUnit": 3616,
+        "scope": 3789,
+        "sourceUnit": 3639,
         "src": "26:29:46",
         "symbolAliases": [],
         "unitAlias": ""
@@ -1096,10 +1096,10 @@
       {
         "absolutePath": "/d/Work/ContectsWork/TokenBrower/contracts/ownership/rbac/RBAC.sol",
         "file": "../../ownership/rbac/RBAC.sol",
-        "id": 3721,
+        "id": 3744,
         "nodeType": "ImportDirective",
-        "scope": 3766,
-        "sourceUnit": 3052,
+        "scope": 3789,
+        "sourceUnit": 3075,
         "src": "56:39:46",
         "symbolAliases": [],
         "unitAlias": ""
@@ -1110,17 +1110,17 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 3722,
+              "id": 3745,
               "name": "MintableToken",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 3615,
+              "referencedDeclaration": 3638,
               "src": "263:13:46",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_MintableToken_$3615",
+                "typeIdentifier": "t_contract$_MintableToken_$3638",
                 "typeString": "contract MintableToken"
               }
             },
-            "id": 3723,
+            "id": 3746,
             "nodeType": "InheritanceSpecifier",
             "src": "263:13:46"
           },
@@ -1128,53 +1128,53 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 3724,
+              "id": 3747,
               "name": "RBAC",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 3051,
+              "referencedDeclaration": 3074,
               "src": "278:4:46",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_RBAC_$3051",
+                "typeIdentifier": "t_contract$_RBAC_$3074",
                 "typeString": "contract RBAC"
               }
             },
-            "id": 3725,
+            "id": 3748,
             "nodeType": "InheritanceSpecifier",
             "src": "278:4:46"
           }
         ],
         "contractDependencies": [
-          2811,
-          3051,
-          3276,
-          3477,
-          3509,
-          3615,
-          4124
+          2834,
+          3074,
+          3299,
+          3500,
+          3532,
+          3638,
+          4147
         ],
         "contractKind": "contract",
         "documentation": "@title RBACMintableToken\n@author Vittorio Minacori (@vittominacori)\n@dev Mintable Token, with RBAC minter permissions",
         "fullyImplemented": true,
-        "id": 3765,
+        "id": 3788,
         "linearizedBaseContracts": [
-          3765,
-          3051,
-          3615,
-          2811,
-          4124,
-          3276,
-          3477,
-          3509
+          3788,
+          3074,
+          3638,
+          2834,
+          4147,
+          3299,
+          3500,
+          3532
         ],
         "name": "RBACMintableToken",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": true,
-            "id": 3728,
+            "id": 3751,
             "name": "ROLE_MINTER",
             "nodeType": "VariableDeclaration",
-            "scope": 3765,
+            "scope": 3788,
             "src": "349:45:46",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1183,7 +1183,7 @@
               "typeString": "string"
             },
             "typeName": {
-              "id": 3726,
+              "id": 3749,
               "name": "string",
               "nodeType": "ElementaryTypeName",
               "src": "349:6:46",
@@ -1195,7 +1195,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "6d696e746572",
-              "id": 3727,
+              "id": 3750,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -1214,7 +1214,7 @@
           },
           {
             "body": {
-              "id": 3737,
+              "id": 3760,
               "nodeType": "Block",
               "src": "511:52:46",
               "statements": [
@@ -1226,18 +1226,18 @@
                         "argumentTypes": null,
                         "expression": {
                           "argumentTypes": null,
-                          "id": 3731,
+                          "id": 3754,
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 5905,
+                          "referencedDeclaration": 5928,
                           "src": "527:3:46",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
                             "typeString": "msg"
                           }
                         },
-                        "id": 3732,
+                        "id": 3755,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1253,11 +1253,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 3733,
+                        "id": 3756,
                         "name": "ROLE_MINTER",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3728,
+                        "referencedDeclaration": 3751,
                         "src": "539:11:46",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory",
@@ -1276,18 +1276,18 @@
                           "typeString": "string memory"
                         }
                       ],
-                      "id": 3730,
+                      "id": 3753,
                       "name": "checkRole",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2981,
+                      "referencedDeclaration": 3004,
                       "src": "517:9:46",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_view$_t_address_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (address,string memory) view"
                       }
                     },
-                    "id": 3734,
+                    "id": 3757,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1301,23 +1301,23 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 3735,
+                  "id": 3758,
                   "nodeType": "ExpressionStatement",
                   "src": "517:34:46"
                 },
                 {
-                  "id": 3736,
+                  "id": 3759,
                   "nodeType": "PlaceholderStatement",
                   "src": "557:1:46"
                 }
               ]
             },
             "documentation": "@dev override the Mintable token modifier to add role based logic",
-            "id": 3738,
+            "id": 3761,
             "name": "hasMintPermission",
             "nodeType": "ModifierDefinition",
             "parameters": {
-              "id": 3729,
+              "id": 3752,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "508:2:46"
@@ -1327,7 +1327,7 @@
           },
           {
             "body": {
-              "id": 3750,
+              "id": 3773,
               "nodeType": "Block",
               "src": "700:39:46",
               "statements": [
@@ -1337,11 +1337,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 3746,
+                        "id": 3769,
                         "name": "minter",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3740,
+                        "referencedDeclaration": 3763,
                         "src": "714:6:46",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -1350,11 +1350,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 3747,
+                        "id": 3770,
                         "name": "ROLE_MINTER",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3728,
+                        "referencedDeclaration": 3751,
                         "src": "722:11:46",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory",
@@ -1373,18 +1373,18 @@
                           "typeString": "string memory"
                         }
                       ],
-                      "id": 3745,
+                      "id": 3768,
                       "name": "addRole",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3018,
+                      "referencedDeclaration": 3041,
                       "src": "706:7:46",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (address,string memory)"
                       }
                     },
-                    "id": 3748,
+                    "id": 3771,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1398,28 +1398,28 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 3749,
+                  "id": 3772,
                   "nodeType": "ExpressionStatement",
                   "src": "706:28:46"
                 }
               ]
             },
             "documentation": "@dev add a minter role to an address\n@param minter address",
-            "id": 3751,
+            "id": 3774,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
             "modifiers": [
               {
                 "arguments": null,
-                "id": 3743,
+                "id": 3766,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 3742,
+                  "id": 3765,
                   "name": "onlyOwner",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 2769,
+                  "referencedDeclaration": 2792,
                   "src": "683:9:46",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -1433,15 +1433,15 @@
             "name": "addMinter",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3741,
+              "id": 3764,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3740,
+                  "id": 3763,
                   "name": "minter",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3751,
+                  "scope": 3774,
                   "src": "667:14:46",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1450,7 +1450,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3739,
+                    "id": 3762,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "667:7:46",
@@ -1467,12 +1467,12 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 3744,
+              "id": 3767,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "700:0:46"
             },
-            "scope": 3765,
+            "scope": 3788,
             "src": "648:91:46",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -1480,7 +1480,7 @@
           },
           {
             "body": {
-              "id": 3763,
+              "id": 3786,
               "nodeType": "Block",
               "src": "884:42:46",
               "statements": [
@@ -1490,11 +1490,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 3759,
+                        "id": 3782,
                         "name": "minter",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3753,
+                        "referencedDeclaration": 3776,
                         "src": "901:6:46",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -1503,11 +1503,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 3760,
+                        "id": 3783,
                         "name": "ROLE_MINTER",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3728,
+                        "referencedDeclaration": 3751,
                         "src": "909:11:46",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory",
@@ -1526,18 +1526,18 @@
                           "typeString": "string memory"
                         }
                       ],
-                      "id": 3758,
+                      "id": 3781,
                       "name": "removeRole",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3038,
+                      "referencedDeclaration": 3061,
                       "src": "890:10:46",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (address,string memory)"
                       }
                     },
-                    "id": 3761,
+                    "id": 3784,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1551,28 +1551,28 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 3762,
+                  "id": 3785,
                   "nodeType": "ExpressionStatement",
                   "src": "890:31:46"
                 }
               ]
             },
             "documentation": "@dev remove a minter role from an address\n@param minter address",
-            "id": 3764,
+            "id": 3787,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
             "modifiers": [
               {
                 "arguments": null,
-                "id": 3756,
+                "id": 3779,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 3755,
+                  "id": 3778,
                   "name": "onlyOwner",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 2769,
+                  "referencedDeclaration": 2792,
                   "src": "867:9:46",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -1586,15 +1586,15 @@
             "name": "removeMinter",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3754,
+              "id": 3777,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3753,
+                  "id": 3776,
                   "name": "minter",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3764,
+                  "scope": 3787,
                   "src": "851:14:46",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1603,7 +1603,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3752,
+                    "id": 3775,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "851:7:46",
@@ -1620,19 +1620,19 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 3757,
+              "id": 3780,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "884:0:46"
             },
-            "scope": 3765,
+            "scope": 3788,
             "src": "829:97:46",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 3766,
+        "scope": 3789,
         "src": "233:695:46"
       }
     ],
@@ -1644,5 +1644,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.0",
-  "updatedAt": "2018-06-07T07:46:38.388Z"
+  "updatedAt": "2018-06-07T11:18:55.551Z"
 }

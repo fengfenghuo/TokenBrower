@@ -51,23 +51,4 @@ contract DonationsExcitation {
         
         return curRelease.mul(subTime.div(1 days)) - totalAllocations - token.balanceOf(this);
     }
-
-    // function getCurRelease()public view returns(uint) {
-    //     uint subTime = now.sub(createTime);
-    //     uint period = subTime.div(reducePeriod).mul(2);
-    //     uint curRelease = initRelease;
-    //     if (period > 0){
-    //         curRelease = curRelease.div(period);
-    //     }
-    //     return curRelease;
-    // }
-
-    // function getTotalRelease() public returns(uint256) {
-    //     uint subTime = now.sub(createTime);
-    //     return getCurRelease().mul(subTime.div(1 days));
-    // }
-
-    // function getTotal() public returns(uint256) {
-    //     return token.balanceOf(address(this));
-    // }
 }

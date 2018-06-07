@@ -32,24 +32,39 @@ contract TeamExcitation {
         totalAllocations = _totalAllocations;
     }
 
+    function issuse(uint256 value) public returns (bool) {
+        if(!token.transfer(allocationAccount, value)) {
+            revert();
+            return false;
+        }
+        return true;
+    }
+
     function unlock() public returns (bool) {
         if(now > createTime + lockedTime) return false;
 
         uint256 toTransfer = getUnlockBalance();
         if(toTransfer == 0) return false;
 
-        if(!token.transfer(allocationAccount, toTransfer)) return false;
+        if(!token.transfer(allocationAccount, toTransfer)) {
+            revert();
+            return false;
+        }
         return true;
     }
 
+    function getBalance() public view returns (uint256 balance) {
+        return token.balanceOf(this);
+    }
+
     function getLockBalance() public view returns (uint256 balance) {
-        return token.balanceOf(this) - getUnlockBalance();
+        return getBalance() - getUnlockBalance();
     }
 
     function getUnlockBalance() public view returns (uint256 balance) {
         if(now < createTime + lockedTime) return 0;
 
         uint count = now.sub(createTime).div(30 days) + 1;
-        return token.balanceOf(this).mul(perUnlockProfit.mul(count)).div(maxProfit);
+        return getBalance().mul(perUnlockProfit.mul(count)).div(maxProfit);
     }
 }

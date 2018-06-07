@@ -32,8 +32,8 @@ App = {
   },
 
   initContract: function() {
-    // 加载VBToken.json，保存了Adoption的ABI（接口说明）信息及部署后的网络(地址)信息，它在编译合约的时候生成ABI，在部署的时候追加网络信息
-    $.getJSON('VBToken.json', function (data) {
+    // 加载Token.json，保存了Adoption的ABI（接口说明）信息及部署后的网络(地址)信息，它在编译合约的时候生成ABI，在部署的时候追加网络信息
+    $.getJSON('SFOXToken.json', function (data) {
       // 用VBToken.json数据创建一个可交互的TruffleContract合约实例。
       var Artifact = data;
       App.contracts.Token = TruffleContract(Artifact);
@@ -42,13 +42,13 @@ App = {
       App.contracts.Token.setProvider(App.web3Provider);
 
       App.bindContractEvents();
-      return App.initContractData();
+      return App.initTokenContractData();
     });
 
     return App.bindEvents();
   },
 
-  initContractData: function(){
+  initTokenContractData: function(){
     $('#user_table').empty("");
     var token_name = "";
     var token_decimals;
@@ -56,10 +56,27 @@ App = {
     var contract_hash = "";//"0x29c704137e320183cf3fc3266dc57ec8499f9e7e09efc41971ccd773b75a6010";
     var token_instance;
 
-    // $.getJSON('VBToken.json', function (data) {
-    //   var temp = data.networks;
-    //   contract_hash = temp.transactionHash;
-    // });
+    $.getJSON('TeamExcitation.json', function (data) {
+      // TeamExcitation.json数据创建一个可交互的TruffleContract合约实例。
+      var Artifact = data;
+      App.contracts.TeamExcitation = TruffleContract(Artifact);
+      
+      // Set the provider for our contract
+      App.contracts.TeamExcitation.setProvider(App.web3Provider);
+
+      return App.initTeamContractData();
+    });
+
+    $.getJSON('DonationsExcitation.json', function (data) {
+      // DonationsExcitation.json数据创建一个可交互的TruffleContract合约实例。
+      var Artifact = data;
+      App.contracts.DonationsExcitation = TruffleContract(Artifact);
+      
+      // Set the provider for our contract
+      App.contracts.DonationsExcitation.setProvider(App.web3Provider);
+
+      return App.initDonationsContractData();
+    });
 
     App.contracts.Token.deployed().then(function (instance) {
       console.log(instance);
@@ -80,6 +97,25 @@ App = {
     }).catch(function (err) {
       console.log(err.message);
     });
+  },
+
+  initTeamContractData: function() {
+    var team_contract = web3.eth.contract(App.contracts.TeamExcitation.abi);
+    App.contracts.Token.deployed().then(function(instance){
+      return instance.teamExcitationContract.call();
+    }).then(function(addr){
+      var contract_instance = team_contract.at(addr);
+      var balance = contract_instance.getLockBalance();
+    //   return contract_instance.methods.getLockBalance().call();
+    // }).then(function(result){
+    //   console.log(result);
+    // }).catch(function (err) {
+    //   console.log(err.message);
+    });
+  },
+
+  initDonationsContractData: function() {
+
   },
 
   //时间戳转日期格式  

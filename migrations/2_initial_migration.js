@@ -1,4 +1,4 @@
-var Adoption = artifacts.require("SFOX");
+var Adoption = artifacts.require("SFOXToken");
 
 module.exports = function(deployer) {
   deployer.deploy(Adoption, 100000000, 0x29a13FD6d1c19773A54Aaa5bd4F6442D4567Fe99, 0xcb3B3511D3B5033E3fF4F3Ef7d516d3F6657Df57, 0x79E98D58eBCb276b26E1D9177c67AD61B2009aFa, 0x7F1dA592485780e207A170C242e59b6497f14761, 0xbc381d4E0A9635a8fF10DFb0ba22453c89F5AEC8);

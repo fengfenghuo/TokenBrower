@@ -142,14 +142,14 @@
     "absolutePath": "/d/Work/ContectsWork/TokenBrower/contracts/ownership/NoOwner.sol",
     "exportedSymbols": {
       "NoOwner": [
-        2735
+        2758
       ]
     },
-    "id": 2736,
+    "id": 2759,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2725,
+        "id": 2748,
         "literals": [
           "solidity",
           "^",
@@ -162,10 +162,10 @@
       {
         "absolutePath": "/d/Work/ContectsWork/TokenBrower/contracts/ownership/HasNoEther.sol",
         "file": "./HasNoEther.sol",
-        "id": 2726,
+        "id": 2749,
         "nodeType": "ImportDirective",
-        "scope": 2736,
-        "sourceUnit": 2477,
+        "scope": 2759,
+        "sourceUnit": 2500,
         "src": "26:26:32",
         "symbolAliases": [],
         "unitAlias": ""
@@ -173,10 +173,10 @@
       {
         "absolutePath": "/d/Work/ContectsWork/TokenBrower/contracts/ownership/HasNoTokens.sol",
         "file": "./HasNoTokens.sol",
-        "id": 2727,
+        "id": 2750,
         "nodeType": "ImportDirective",
-        "scope": 2736,
-        "sourceUnit": 2502,
+        "scope": 2759,
+        "sourceUnit": 2525,
         "src": "53:27:32",
         "symbolAliases": [],
         "unitAlias": ""
@@ -184,10 +184,10 @@
       {
         "absolutePath": "/d/Work/ContectsWork/TokenBrower/contracts/ownership/HasNoContracts.sol",
         "file": "./HasNoContracts.sol",
-        "id": 2728,
+        "id": 2751,
         "nodeType": "ImportDirective",
-        "scope": 2736,
-        "sourceUnit": 2443,
+        "scope": 2759,
+        "sourceUnit": 2466,
         "src": "81:30:32",
         "symbolAliases": [],
         "unitAlias": ""
@@ -198,17 +198,17 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 2729,
+              "id": 2752,
               "name": "HasNoEther",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2476,
+              "referencedDeclaration": 2499,
               "src": "409:10:32",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_HasNoEther_$2476",
+                "typeIdentifier": "t_contract$_HasNoEther_$2499",
                 "typeString": "contract HasNoEther"
               }
             },
-            "id": 2730,
+            "id": 2753,
             "nodeType": "InheritanceSpecifier",
             "src": "409:10:32"
           },
@@ -216,17 +216,17 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 2731,
+              "id": 2754,
               "name": "HasNoTokens",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2501,
+              "referencedDeclaration": 2524,
               "src": "421:11:32",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_HasNoTokens_$2501",
+                "typeIdentifier": "t_contract$_HasNoTokens_$2524",
                 "typeString": "contract HasNoTokens"
               }
             },
-            "id": 2732,
+            "id": 2755,
             "nodeType": "InheritanceSpecifier",
             "src": "421:11:32"
           },
@@ -234,44 +234,44 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 2733,
+              "id": 2756,
               "name": "HasNoContracts",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2442,
+              "referencedDeclaration": 2465,
               "src": "434:14:32",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_HasNoContracts_$2442",
+                "typeIdentifier": "t_contract$_HasNoContracts_$2465",
                 "typeString": "contract HasNoContracts"
               }
             },
-            "id": 2734,
+            "id": 2757,
             "nodeType": "InheritanceSpecifier",
             "src": "434:14:32"
           }
         ],
         "contractDependencies": [
-          2271,
-          2442,
-          2476,
-          2501,
-          2811
+          2294,
+          2465,
+          2499,
+          2524,
+          2834
         ],
         "contractKind": "contract",
         "documentation": "@title Base contract for contracts that should not own things.\n@author Remco Bloemen <remco@2π.com>\n@dev Solves a class of errors where a contract accidentally becomes owner of Ether, Tokens or\nOwned contracts. See respective base contracts for details.",
         "fullyImplemented": true,
-        "id": 2735,
+        "id": 2758,
         "linearizedBaseContracts": [
-          2735,
-          2442,
-          2501,
-          2271,
-          2476,
-          2811
+          2758,
+          2465,
+          2524,
+          2294,
+          2499,
+          2834
         ],
         "name": "NoOwner",
         "nodeType": "ContractDefinition",
         "nodes": [],
-        "scope": 2736,
+        "scope": 2759,
         "src": "389:63:32"
       }
     ],
@@ -281,14 +281,14 @@
     "absolutePath": "/d/Work/ContectsWork/TokenBrower/contracts/ownership/NoOwner.sol",
     "exportedSymbols": {
       "NoOwner": [
-        2735
+        2758
       ]
     },
-    "id": 2736,
+    "id": 2759,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2725,
+        "id": 2748,
         "literals": [
           "solidity",
           "^",
@@ -301,10 +301,10 @@
       {
         "absolutePath": "/d/Work/ContectsWork/TokenBrower/contracts/ownership/HasNoEther.sol",
         "file": "./HasNoEther.sol",
-        "id": 2726,
+        "id": 2749,
         "nodeType": "ImportDirective",
-        "scope": 2736,
-        "sourceUnit": 2477,
+        "scope": 2759,
+        "sourceUnit": 2500,
         "src": "26:26:32",
         "symbolAliases": [],
         "unitAlias": ""
@@ -312,10 +312,10 @@
       {
         "absolutePath": "/d/Work/ContectsWork/TokenBrower/contracts/ownership/HasNoTokens.sol",
         "file": "./HasNoTokens.sol",
-        "id": 2727,
+        "id": 2750,
         "nodeType": "ImportDirective",
-        "scope": 2736,
-        "sourceUnit": 2502,
+        "scope": 2759,
+        "sourceUnit": 2525,
         "src": "53:27:32",
         "symbolAliases": [],
         "unitAlias": ""
@@ -323,10 +323,10 @@
       {
         "absolutePath": "/d/Work/ContectsWork/TokenBrower/contracts/ownership/HasNoContracts.sol",
         "file": "./HasNoContracts.sol",
-        "id": 2728,
+        "id": 2751,
         "nodeType": "ImportDirective",
-        "scope": 2736,
-        "sourceUnit": 2443,
+        "scope": 2759,
+        "sourceUnit": 2466,
         "src": "81:30:32",
         "symbolAliases": [],
         "unitAlias": ""
@@ -337,17 +337,17 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 2729,
+              "id": 2752,
               "name": "HasNoEther",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2476,
+              "referencedDeclaration": 2499,
               "src": "409:10:32",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_HasNoEther_$2476",
+                "typeIdentifier": "t_contract$_HasNoEther_$2499",
                 "typeString": "contract HasNoEther"
               }
             },
-            "id": 2730,
+            "id": 2753,
             "nodeType": "InheritanceSpecifier",
             "src": "409:10:32"
           },
@@ -355,17 +355,17 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 2731,
+              "id": 2754,
               "name": "HasNoTokens",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2501,
+              "referencedDeclaration": 2524,
               "src": "421:11:32",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_HasNoTokens_$2501",
+                "typeIdentifier": "t_contract$_HasNoTokens_$2524",
                 "typeString": "contract HasNoTokens"
               }
             },
-            "id": 2732,
+            "id": 2755,
             "nodeType": "InheritanceSpecifier",
             "src": "421:11:32"
           },
@@ -373,44 +373,44 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 2733,
+              "id": 2756,
               "name": "HasNoContracts",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2442,
+              "referencedDeclaration": 2465,
               "src": "434:14:32",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_HasNoContracts_$2442",
+                "typeIdentifier": "t_contract$_HasNoContracts_$2465",
                 "typeString": "contract HasNoContracts"
               }
             },
-            "id": 2734,
+            "id": 2757,
             "nodeType": "InheritanceSpecifier",
             "src": "434:14:32"
           }
         ],
         "contractDependencies": [
-          2271,
-          2442,
-          2476,
-          2501,
-          2811
+          2294,
+          2465,
+          2499,
+          2524,
+          2834
         ],
         "contractKind": "contract",
         "documentation": "@title Base contract for contracts that should not own things.\n@author Remco Bloemen <remco@2π.com>\n@dev Solves a class of errors where a contract accidentally becomes owner of Ether, Tokens or\nOwned contracts. See respective base contracts for details.",
         "fullyImplemented": true,
-        "id": 2735,
+        "id": 2758,
         "linearizedBaseContracts": [
-          2735,
-          2442,
-          2501,
-          2271,
-          2476,
-          2811
+          2758,
+          2465,
+          2524,
+          2294,
+          2499,
+          2834
         ],
         "name": "NoOwner",
         "nodeType": "ContractDefinition",
         "nodes": [],
-        "scope": 2736,
+        "scope": 2759,
         "src": "389:63:32"
       }
     ],
@@ -422,5 +422,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.0",
-  "updatedAt": "2018-06-07T07:46:38.383Z"
+  "updatedAt": "2018-06-07T11:18:55.546Z"
 }
