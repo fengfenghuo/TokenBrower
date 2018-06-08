@@ -25,11 +25,6 @@ contract SFOXToken is StandardToken, AuthorityManaged {
     uint private counselorProfit = 1000;
 
     /**
-        config
-    */ 
-    uint256 teamExcitationLockTime = 20 * 30 days;
-
-    /**
         child contracts address
      */
     DonationsExcitation public donationsExcitationContract;
@@ -50,7 +45,7 @@ contract SFOXToken is StandardToken, AuthorityManaged {
         uint256 teamExcitationAmount = totalSupply_ / maxDivisor * teamProfit;
 
         donationsExcitationContract = new DonationsExcitation(this, _donationsAccount, donationsExcitationAmount);
-        teamExcitationContract = new TeamExcitation(this, _teamAccount, teamExcitationAmount, teamExcitationLockTime);
+        teamExcitationContract = new TeamExcitation(this, _teamAccount, teamExcitationAmount);
 
         balances[msg.sender] = totalSupply_ / maxDivisor * ICOProfit;
         balances[_promotionAccount] = totalSupply_ / maxDivisor * promotionProfit;

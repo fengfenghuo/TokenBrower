@@ -16,25 +16,24 @@ contract TeamExcitation {
     uint private perUnlockProfit = 500;
     
     uint256 public createTime;
-    uint256 public lockedTime;
+    uint private period = 60 seconds; //30 days;
+    uint public lockedTime = 0 * period;//20;
 
     SFOXToken token;
 
     function TeamExcitation (
         SFOXToken _token,
         address _allocationAccount, 
-        uint256 _totalAllocations, 
-        uint256 _lockedTime
+        uint256 _totalAllocations
     ) public {
         token = _token;
         allocationAccount = _allocationAccount;
-        lockedTime = _lockedTime;
         createTime = now;
         totalAllocations = _totalAllocations;
     }
 
     function unlock() public returns (bool) {
-        if(now > createTime + lockedTime) return false;
+        if(now < createTime + lockedTime) return false;
 
         uint256 toTransfer = getUnlockBalance();
         if(toTransfer == 0) return false;
@@ -55,7 +54,7 @@ contract TeamExcitation {
     function getUnlockBalance() public view returns (uint256 balance) {
         if(now < createTime + lockedTime) return 0;
 
-        uint count = now.sub(createTime).div(30 days) + 1;
+        uint count = now.sub(createTime).div(period) + 1;
         return getBalance().mul(perUnlockProfit.mul(count)).div(maxProfit);
     }
 }

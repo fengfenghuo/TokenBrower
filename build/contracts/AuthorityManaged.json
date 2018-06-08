@@ -249,7 +249,7 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1131,
+                        "referencedDeclaration": 1118,
                         "src": "383:3:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -338,7 +338,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1131,
+                            "referencedDeclaration": 1118,
                             "src": "507:3:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -392,7 +392,7 @@
                       "name": "assert",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1120,
+                      "referencedDeclaration": 1107,
                       "src": "500:6:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_assert_pure$_t_bool_$returns$__$",
@@ -504,10 +504,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1134,
-                        1135
+                        1121,
+                        1122
                       ],
-                      "referencedDeclaration": 1134,
+                      "referencedDeclaration": 1121,
                       "src": "806:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -683,7 +683,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1131,
+                            "referencedDeclaration": 1118,
                             "src": "1010:3:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -737,10 +737,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1134,
-                        1135
+                        1121,
+                        1122
                       ],
-                      "referencedDeclaration": 1134,
+                      "referencedDeclaration": 1121,
                       "src": "1002:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1199,7 +1199,7 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1131,
+                        "referencedDeclaration": 1118,
                         "src": "383:3:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -1288,7 +1288,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1131,
+                            "referencedDeclaration": 1118,
                             "src": "507:3:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -1342,7 +1342,7 @@
                       "name": "assert",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1120,
+                      "referencedDeclaration": 1107,
                       "src": "500:6:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_assert_pure$_t_bool_$returns$__$",
@@ -1454,10 +1454,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1134,
-                        1135
+                        1121,
+                        1122
                       ],
-                      "referencedDeclaration": 1134,
+                      "referencedDeclaration": 1121,
                       "src": "806:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1633,7 +1633,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1131,
+                            "referencedDeclaration": 1118,
                             "src": "1010:3:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -1687,10 +1687,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1134,
-                        1135
+                        1121,
+                        1122
                       ],
-                      "referencedDeclaration": 1134,
+                      "referencedDeclaration": 1121,
                       "src": "1002:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1963,5 +1963,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.0",
-  "updatedAt": "2018-06-08T06:20:25.214Z"
+  "updatedAt": "2018-06-08T08:04:28.876Z"
 }
