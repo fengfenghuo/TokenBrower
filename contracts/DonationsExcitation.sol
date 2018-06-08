@@ -10,9 +10,11 @@ contract DonationsExcitation {
     // Total number of allocations to distribute additional tokens
     address allocationAccount;
     uint256 public totalAllocations;
+    uint256 private releasedCount;
 
     uint private reducePeriod = 1 minutes;//2 * 12 * 30 days;
     uint private initRelease = 30000;
+    uint private releasePeriod = 30 seconds;// 1 days;
 
     uint256 public createTime;
 
@@ -34,21 +36,34 @@ contract DonationsExcitation {
         if(toTransfer == 0) return false;
 
         if(!token.transfer(allocationAccount, toTransfer)) return false;
+        releasedCount = releasedCount.add(toTransfer);
         return true;
     }
 
     function getLockBalance() public view returns (uint256 balance) {
-        return token.balanceOf(this) - getReleaseBalance();
+        return getBalance() - getReleaseBalance();
     }
 
     function getReleaseBalance() public view returns (uint256 balance) {
         uint subTime = now.sub(createTime);
-        uint period = subTime.div(reducePeriod).mul(2);
+
+        uint releaseCount = reducePeriod.div(releasePeriod);
+        uint256 totalRelease;
         uint curRelease = initRelease;
-        if (period > 0){
-            curRelease = curRelease.div(period);
+        for(uint i = 0; i < subTime.div(reducePeriod) + 1; i++) {
+            if(i != 0 && i % releaseCount == 0){
+                curRelease = curRelease.div(2);
+            }
+            totalRelease = totalRelease.add(curRelease);
         }
         
-        return curRelease.mul(subTime.div(1 days)) - totalAllocations - token.balanceOf(this);
+        if(totalRelease > totalAllocations){
+            totalRelease = totalAllocations;
+        }
+        return totalRelease;
+    }
+
+    function getBalance() public view returns(uint256 balance) {
+        return totalAllocations - releasedCount;
     }
 }

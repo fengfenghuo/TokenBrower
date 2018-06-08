@@ -10,6 +10,7 @@ contract TeamExcitation {
     // Total number of allocations to distribute additional tokens
     address allocationAccount;
     uint256 public totalAllocations;
+    uint256 private releasedCount;
 
     uint private maxProfit = 10000;
     uint private perUnlockProfit = 500;
@@ -32,29 +33,19 @@ contract TeamExcitation {
         totalAllocations = _totalAllocations;
     }
 
-    function issuse(uint256 value) public returns (bool) {
-        if(!token.transfer(allocationAccount, value)) {
-            revert();
-            return false;
-        }
-        return true;
-    }
-
     function unlock() public returns (bool) {
         if(now > createTime + lockedTime) return false;
 
         uint256 toTransfer = getUnlockBalance();
         if(toTransfer == 0) return false;
 
-        if(!token.transfer(allocationAccount, toTransfer)) {
-            revert();
-            return false;
-        }
+        if(!token.transfer(allocationAccount, toTransfer)) return false;
+        releasedCount = releasedCount.add(toTransfer);
         return true;
     }
 
     function getBalance() public view returns (uint256 balance) {
-        return token.balanceOf(this);
+        return totalAllocations - releasedCount;
     }
 
     function getLockBalance() public view returns (uint256 balance) {

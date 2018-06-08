@@ -51,11 +51,11 @@
       "type": "function"
     }
   ],
-  "bytecode": "0x608060405234801561001057600080fd5b506103d2806100206000396000f300608060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806379ba50971461005c578063f2fde38b14610073578063fbfd2045146100b6575b600080fd5b34801561006857600080fd5b506100716100cd565b005b34801561007f57600080fd5b506100b4600480360381019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061026c565b005b3480156100c257600080fd5b506100cb610364565b005b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561012957600080fd5b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f343765429aea5a34b3ff6a3785a98a5abb2597aca87bfbb58632c173d585373a60405160405180910390a3600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff166000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506000600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161415156102c457fe5b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161415151561032057600080fd5b80600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555050565b336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505600a165627a7a723058202ed06674c455e79be7974ac6ebbf2b216e1bada5a8e0409c95baf8bc3dc7d7790029",
-  "deployedBytecode": "0x608060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806379ba50971461005c578063f2fde38b14610073578063fbfd2045146100b6575b600080fd5b34801561006857600080fd5b506100716100cd565b005b34801561007f57600080fd5b506100b4600480360381019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061026c565b005b3480156100c257600080fd5b506100cb610364565b005b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561012957600080fd5b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f343765429aea5a34b3ff6a3785a98a5abb2597aca87bfbb58632c173d585373a60405160405180910390a3600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff166000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506000600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161415156102c457fe5b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161415151561032057600080fd5b80600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555050565b336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505600a165627a7a723058202ed06674c455e79be7974ac6ebbf2b216e1bada5a8e0409c95baf8bc3dc7d7790029",
+  "bytecode": "0x608060405234801561001057600080fd5b506103d2806100206000396000f300608060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806379ba50971461005c578063f2fde38b14610073578063fbfd2045146100b6575b600080fd5b34801561006857600080fd5b506100716100cd565b005b34801561007f57600080fd5b506100b4600480360381019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061026c565b005b3480156100c257600080fd5b506100cb610364565b005b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561012957600080fd5b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f343765429aea5a34b3ff6a3785a98a5abb2597aca87bfbb58632c173d585373a60405160405180910390a3600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff166000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506000600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161415156102c457fe5b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161415151561032057600080fd5b80600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555050565b336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505600a165627a7a723058203ca44cee7540c807cfd11ee0864cb19e85040f6339f3c40fa703b0fbcebc8b270029",
+  "deployedBytecode": "0x608060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806379ba50971461005c578063f2fde38b14610073578063fbfd2045146100b6575b600080fd5b34801561006857600080fd5b506100716100cd565b005b34801561007f57600080fd5b506100b4600480360381019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061026c565b005b3480156100c257600080fd5b506100cb610364565b005b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561012957600080fd5b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f343765429aea5a34b3ff6a3785a98a5abb2597aca87bfbb58632c173d585373a60405160405180910390a3600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff166000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506000600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161415156102c457fe5b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161415151561032057600080fd5b80600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555050565b336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505600a165627a7a723058203ca44cee7540c807cfd11ee0864cb19e85040f6339f3c40fa703b0fbcebc8b270029",
   "sourceMap": "115:1032:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;115:1032:0;;;;;;;",
   "deployedSourceMap": "115:1032:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;957:187;;8:9:-1;5:2;;;30:1;27;20:12;5:2;957:187:0;;;;;;732:140;;8:9:-1;5:2;;;30:1;27;20:12;5:2;732:140:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;335:66;;8:9:-1;5:2;;;30:1;27;20:12;5:2;335:66:0;;;;;;957:187;1024:8;;;;;;;;;;;1010:22;;:10;:22;;;1002:31;;;;;;;;1068:8;;;;;;;;;;;1049:28;;1061:5;;;;;;;;;;;1049:28;;;;;;;;;;;;1096:8;;;;;;;;;;;1088:5;;:16;;;;;;;;;;;;;;;;;;1134:1;1115:8;;:21;;;;;;;;;;;;;;;;;;957:187::o;732:140::-;521:5;;;;;;;;;;;507:19;;:10;:19;;;500:27;;;;;;827:5;;;;;;;;;;;814:18;;:9;:18;;;;806:27;;;;;;;;855:9;844:8;;:20;;;;;;;;;;;;;;;;;;732:140;:::o;335:66::-;383:10;375:5;;:18;;;;;;;;;;;;;;;;;;335:66::o",
-  "source": "pragma solidity ^0.4.23;\r\n\r\n/// @title AuthorityManaged - Provides support and utilities for contract ownership\r\n\r\ncontract AuthorityManaged {\r\n    address owner;\r\n    address newOwner;\r\n\r\n    /**\r\n    \r\n    */\r\n    event OwnerUpdate(address indexed _prevOwner, address indexed _newOwner);\r\n\r\n    /**\r\n        constructor\r\n    */\r\n    function contractor() public {\r\n        owner = msg.sender;\r\n    }\r\n\r\n    /**\r\n        allows execution by the owner only\r\n    */\r\n    modifier ownerOnly {\r\n        assert(msg.sender == owner);\r\n        _;\r\n    }\r\n\r\n    /**\r\n        allows transfering the contract ownership \r\n        the new owner still needs to accept the transfer\r\n        can only be called by the contract owner\r\n    */\r\n    function transferOwnership(address _newOwner) public ownerOnly {\r\n        require(_newOwner != owner);\r\n        newOwner = _newOwner;\r\n    }\r\n\r\n    /**\r\n        new owner can use to accept an ownership transfer\r\n     */\r\n    function acceptOwnership() public {\r\n        require(msg.sender == newOwner);\r\n        emit OwnerUpdate(owner, newOwner);\r\n        owner = newOwner;\r\n        newOwner = address(0);\r\n    }\r\n}\r\n",
+  "source": "pragma solidity ^0.4.21;\r\n\r\n/// @title AuthorityManaged - Provides support and utilities for contract ownership\r\n\r\ncontract AuthorityManaged {\r\n    address owner;\r\n    address newOwner;\r\n\r\n    /**\r\n    \r\n    */\r\n    event OwnerUpdate(address indexed _prevOwner, address indexed _newOwner);\r\n\r\n    /**\r\n        constructor\r\n    */\r\n    function contractor() public {\r\n        owner = msg.sender;\r\n    }\r\n\r\n    /**\r\n        allows execution by the owner only\r\n    */\r\n    modifier ownerOnly {\r\n        assert(msg.sender == owner);\r\n        _;\r\n    }\r\n\r\n    /**\r\n        allows transfering the contract ownership \r\n        the new owner still needs to accept the transfer\r\n        can only be called by the contract owner\r\n    */\r\n    function transferOwnership(address _newOwner) public ownerOnly {\r\n        require(_newOwner != owner);\r\n        newOwner = _newOwner;\r\n    }\r\n\r\n    /**\r\n        new owner can use to accept an ownership transfer\r\n     */\r\n    function acceptOwnership() public {\r\n        require(msg.sender == newOwner);\r\n        emit OwnerUpdate(owner, newOwner);\r\n        owner = newOwner;\r\n        newOwner = address(0);\r\n    }\r\n}\r\n",
   "sourcePath": "d:\\Work\\ContectsWork\\TokenBrower\\contracts\\AuthorityManaged.sol",
   "ast": {
     "absolutePath": "/d/Work/ContectsWork/TokenBrower/contracts/AuthorityManaged.sol",
@@ -73,7 +73,7 @@
           "solidity",
           "^",
           "0.4",
-          ".23"
+          ".21"
         ],
         "nodeType": "PragmaDirective",
         "src": "0:24:0"
@@ -249,7 +249,7 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1091,
+                        "referencedDeclaration": 1131,
                         "src": "383:3:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -338,7 +338,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1091,
+                            "referencedDeclaration": 1131,
                             "src": "507:3:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -392,7 +392,7 @@
                       "name": "assert",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1080,
+                      "referencedDeclaration": 1120,
                       "src": "500:6:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_assert_pure$_t_bool_$returns$__$",
@@ -504,10 +504,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1094,
-                        1095
+                        1134,
+                        1135
                       ],
-                      "referencedDeclaration": 1094,
+                      "referencedDeclaration": 1134,
                       "src": "806:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -683,7 +683,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1091,
+                            "referencedDeclaration": 1131,
                             "src": "1010:3:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -737,10 +737,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1094,
-                        1095
+                        1134,
+                        1135
                       ],
-                      "referencedDeclaration": 1094,
+                      "referencedDeclaration": 1134,
                       "src": "1002:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1023,7 +1023,7 @@
           "solidity",
           "^",
           "0.4",
-          ".23"
+          ".21"
         ],
         "nodeType": "PragmaDirective",
         "src": "0:24:0"
@@ -1199,7 +1199,7 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1091,
+                        "referencedDeclaration": 1131,
                         "src": "383:3:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -1288,7 +1288,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1091,
+                            "referencedDeclaration": 1131,
                             "src": "507:3:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -1342,7 +1342,7 @@
                       "name": "assert",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1080,
+                      "referencedDeclaration": 1120,
                       "src": "500:6:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_assert_pure$_t_bool_$returns$__$",
@@ -1454,10 +1454,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1094,
-                        1095
+                        1134,
+                        1135
                       ],
-                      "referencedDeclaration": 1094,
+                      "referencedDeclaration": 1134,
                       "src": "806:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1633,7 +1633,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1091,
+                            "referencedDeclaration": 1131,
                             "src": "1010:3:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -1687,10 +1687,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1094,
-                        1095
+                        1134,
+                        1135
                       ],
-                      "referencedDeclaration": 1094,
+                      "referencedDeclaration": 1134,
                       "src": "1002:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1963,5 +1963,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.0",
-  "updatedAt": "2018-06-07T11:44:46.742Z"
+  "updatedAt": "2018-06-08T06:20:25.214Z"
 }

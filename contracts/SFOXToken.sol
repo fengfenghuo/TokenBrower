@@ -1,4 +1,4 @@
-pragma solidity ^0.4.23;
+pragma solidity ^0.4.21;
 
 import "./token/ERC20/StandardToken.sol";
 import "./AuthorityManaged.sol";

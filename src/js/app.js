@@ -105,12 +105,16 @@ App = {
       return instance.teamExcitationContract.call();
     }).then(function(addr){
       var contract_instance = team_contract.at(addr);
-      var balance = contract_instance.getLockBalance();
-    //   return contract_instance.methods.getLockBalance().call();
-    // }).then(function(result){
-    //   console.log(result);
-    // }).catch(function (err) {
-    //   console.log(err.message);
+      var total = contract_instance.totalAllocations.call();
+      var balance = contract_instance.getBalance.call();
+      console.log(total);
+      console.log(balance);
+      // var contract = new web3.eth.contract(App.contracts.TeamExcitation.abi, addr);
+      // contract.methods.getLockBalance().call(null, function(error, result){
+      //   console.log(result);
+      // })
+    }).catch(function (err) {
+      console.log(err.message);
     });
   },
 

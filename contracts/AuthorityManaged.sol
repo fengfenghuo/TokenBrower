@@ -1,4 +1,4 @@
-pragma solidity ^0.4.23;
+pragma solidity ^0.4.21;
 
 /// @title AuthorityManaged - Provides support and utilities for contract ownership
 
